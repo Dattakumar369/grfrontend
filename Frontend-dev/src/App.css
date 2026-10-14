@@ -1,0 +1,90 @@
+app-wrapper ensures fixed layout with max-width and padding */
+ .app-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5;
+} 
+
+/* Make all images responsive */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+} 
+
+/* Responsive product grid spacing */
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Responsive product card */
+.product-card {
+  flex: 1 1 calc(100% / 2 - 1rem);
+  max-width: calc(100% / 2 - 1rem);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: transform 0.2s;
+} 
+
+ .product-card:hover {
+  transform: scale(1.02);
+} 
+
+/* Headings and text */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+/* Utility button spacing */
+.btn {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Fix layout for product name and price */
+.product-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} 
+
+/* Responsive adjustments */
+ @media (min-width: 768px) {
+  .product-card {
+    flex: 1 1 calc(100% / 3 - 1rem);
+    max-width: calc(100% / 3 - 1rem);
+  }
+} 
+
+ @media (min-width: 992px) {
+  .product-card {
+    flex: 1 1 calc(100% / 4 - 1rem);
+    max-width: calc(100% / 4 - 1rem);
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-card {
+    flex: 1 1 calc(100% / 5 - 1rem);
+    max-width: calc(100% / 5 - 1rem);
+  }
+}  
+
+body {
+  background-color: #ffffff !important;
+}
